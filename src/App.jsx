@@ -1,15 +1,18 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import AppRouter from './routes';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="bg-gray-100 min-h-screen">
-      <Navbar />
-      <main className="container mx-auto p-4">
-        <AppRouter />
-      </main>
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Navbar />
+        <main className="container mx-auto p-4">
+          <AppRouter />
+        </main>
+      </div>
+    </Router>
   );
 }
 
